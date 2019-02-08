@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/maploader.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Character/attack2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GameInterface/Interface.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Inventory.tscn" type="PackedScene" id=5]
+
+[node name="maploader" type="Node" index="0"]
+
+pause_mode = 2
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+START = "res://Map/World1/WorldMaps/OutsideMain.tscn"
+
+[node name="player" parent="." index="0" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+
+[node name="Interface" parent="player" index="7" instance=ExtResource( 3 )]
+
+margin_left = -366.95
+margin_top = -286.824
+margin_right = -366.95
+margin_bottom = -350.824
+
+[node name="OxygenTimer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[node name="CanvasLayer" parent="." index="2" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+
+[node name="Inventory" parent="." index="3" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+
+[connection signal="timeout" from="OxygenTimer" to="player" method="_on_Timer_timeout"]
+
+
+[editable path="Inventory"]
