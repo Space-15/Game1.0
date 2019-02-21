@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GameInterface/Interface.gd" type="Script" id=1]
+[ext_resource path="res://GameInterface/LifeBar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GameInterface/OxygenBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GameInterface/OxygenBar.gd" type="Script" id=4]
+
+[node name="Interface" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -622.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Bars" type="VBoxContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="LifeBar" parent="Bars" index="0" instance=ExtResource( 2 )]
+
+margin_bottom = 27.0
+
+[node name="counter" parent="Bars/LifeBar" index="0"]
+
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 160.0
+margin_bottom = 27.0
+
+[node name="Label" parent="Bars/LifeBar/counter" index="1"]
+
+margin_left = -94.0
+margin_top = 3.5
+margin_right = -42.0
+margin_bottom = 34.5
+
+[node name="TextureProgress" parent="Bars/LifeBar" index="1"]
+
+margin_bottom = 27.0
+
+[node name="OxygenBar" parent="Bars" index="1" instance=ExtResource( 3 )]
+
+margin_top = 31.0
+margin_bottom = 58.0
+script = ExtResource( 4 )
+
+[node name="counter" parent="Bars/OxygenBar" index="0"]
+
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 160.0
+margin_bottom = 27.0
+
+[node name="Label" parent="Bars/OxygenBar/counter" index="0"]
+
+margin_top = 2.5
+margin_bottom = 33.5
+
+[connection signal="health_changed" from="." to="Bars/LifeBar" method="_on_Interface_health_changed"]
+
+[connection signal="oxygen_changed" from="." to="Bars/OxygenBar" method="_on_Interface_oxygen_changed"]
+
+
+[editable path="Bars/LifeBar"]
+[editable path="Bars/OxygenBar"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/playerSpawnPoint.gd" type="Script" id=1]
+
+[node name="playerSpawnPoint" type="Position2D"]
+
+position = Vector2( 288.002, 247.031 )
+scale = Vector2( -0.173843, 0.131718 )
+script = ExtResource( 1 )
+RADIUS = 100.0
+EDGES = 32
+LINE_COLOR = Color( 1, 1, 1, 1 )
+
+

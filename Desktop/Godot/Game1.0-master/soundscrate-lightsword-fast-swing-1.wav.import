@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soundscrate-lightsword-fast-swing-1.wav-1d3c60e0317392ff6a5f110cc3e4c765.sample"
+
+[deps]
+
+source_file="res://soundscrate-lightsword-fast-swing-1.wav"
+dest_files=[ "res://.import/soundscrate-lightsword-fast-swing-1.wav-1d3c60e0317392ff6a5f110cc3e4c765.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
