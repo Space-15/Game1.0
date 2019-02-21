@@ -115,8 +115,6 @@ scale = Vector2( 0.908184, 1.12525 )
 
 [node name="pickable" type="Node" parent="." index="3"]
 
-editor/display_folded = true
-
 [node name="baguette" type="Node" parent="pickable" index="0"]
 
 editor/display_folded = true
@@ -142,8 +140,6 @@ position = Vector2( -930.591, -501.723 )
 scale = Vector2( 0.924154, 0.575603 )
 
 [node name="oxygenTanks" type="Node" parent="pickable" index="1"]
-
-editor/display_folded = true
 
 [node name="tank" parent="pickable/oxygenTanks" index="0" instance=ExtResource( 4 )]
 
@@ -176,8 +172,6 @@ position = Vector2( -1143.28, -1313.32 )
 scale = Vector2( 0.908184, 1.12525 )
 
 [node name="components" type="Node" parent="pickable" index="2"]
-
-editor/display_folded = true
 
 [node name="radar" parent="pickable/components" index="0" instance=ExtResource( 6 )]
 
