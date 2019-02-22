@@ -125,7 +125,11 @@ func _gui_input(event):
 						clickedSlot.useItem()
 						Global.Player.gain_o2(20)
 					   	
-					
+func save():
+	pass
+	
+func load_state(data):
+	pass
 					
 				
 				
@@ -143,4 +147,3 @@ func _gui_input(event):
 	
 				
 		
-

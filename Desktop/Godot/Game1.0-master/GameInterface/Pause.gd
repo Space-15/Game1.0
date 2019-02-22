@@ -45,10 +45,12 @@ func _on_loadBtn_pressed():
 	var save_game = File.new()
 	save_game.open("user://savegame.save", File.READ)
 	var save_nodes = get_tree().get_nodes_in_group("Persistant")
-	print(parse_json(save_game.get_as_text()))
-	for i in save_nodes:
-	    i.load_state()
-	save_game.close()
+	var data = {}
+	data = parse_json(save_game.get_as_text())
+	for k in data.keys():
+		for n in save_nodes:
+			if k == n.get_name():
+				n.load_state(data[k])
 	print("loaded")
 
 func _on_pauseBtn_pressed():

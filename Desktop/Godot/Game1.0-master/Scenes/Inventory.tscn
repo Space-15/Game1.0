@@ -5,7 +5,9 @@
 [sub_resource type="Theme" id=1]
 
 
-[node name="Inventory" type="Node"]
+[node name="Inventory" type="Node" index="0" groups=[
+"Persistant",
+]]
 
 [node name="Panel" type="Panel" parent="." index="0"]
 

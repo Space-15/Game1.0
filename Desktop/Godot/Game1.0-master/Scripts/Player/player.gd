@@ -125,16 +125,17 @@ func _foodpickupSFX():
 	pickupPlayer.play()
 
 func save():
-	var save_dict = {
+	var save_dict = {self.get_name():{
 		"pos_x":self.position.x,
-		"pos_y":self.position.y
+		"pos_y":self.position.y}
 	}
 	return save_dict
 
-func load_state():
-	pass
 
-func load_state1(data):
-	for attribute in data:
-		if attribute == 'pos':
-			set_pos(Vector2(data['pos']['x'], data['pos']['y']))
+
+func load_state(data):
+	position.x = data["pos_x"]
+	position.y = data["pos_y"]
+	#for attribute in data:
+	#	if attribute == 'pos':
+	#		set_pos(Vector2(data['pos']['x'], data['pos']['y']))
