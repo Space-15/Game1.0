@@ -1,0 +1,129 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Map/Assets/Background/Outside/Blue Floor - Big Tree.png" type="Texture" id=1]
+[ext_resource path="res://Map/Assets/Background/Outside/Blue Floor - Pebbles.png" type="Texture" id=2]
+[ext_resource path="res://Map/Assets/Background/Outside/Blue Floor - Small Tree.png" type="Texture" id=3]
+[ext_resource path="res://Map/Assets/Background/Outside/Blue Floor- Pond.png" type="Texture" id=4]
+[ext_resource path="res://Map/Assets/Background/Outside/watercorner.png" type="Texture" id=5]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Blue Floor - Big Tree" type="Sprite" parent="." index="0"]
+
+position = Vector2( 538.258, 299 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Blue Floor - Pebbles" type="Sprite" parent="." index="1"]
+
+position = Vector2( 538.258, 299 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Blue Floor - Small Tree" type="Sprite" parent="." index="2"]
+
+position = Vector2( 538.258, 299 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Blue Floor- Pond" type="Sprite" parent="." index="3"]
+
+position = Vector2( 538.258, 299 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 96, 64 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="cornerWater" type="Sprite" parent="." index="4"]
+
+position = Vector2( 923, 280 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="sideWater" type="Sprite" parent="." index="5"]
+
+position = Vector2( 1065, 258 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="midwater" type="Sprite" parent="." index="6"]
+
+position = Vector2( 1068, 344 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 32, 15, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leftWater" type="Sprite" parent="." index="7"]
+
+position = Vector2( 1180, 302 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 15, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="cornerTopWater" type="Sprite" parent="." index="8"]
+
+position = Vector2( 924, 369 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="topSideWater" type="Sprite" parent="." index="9"]
+
+position = Vector2( 1191, 385 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="watercorner" type="Sprite" parent="." index="10"]
+
+position = Vector2( 911, 433 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+

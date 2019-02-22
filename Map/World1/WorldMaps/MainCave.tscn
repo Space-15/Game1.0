@@ -1,0 +1,219 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Map/World1/WorldMaps/Cave1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Items/tank.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/playerSpawnPoint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Items/baguette.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/radar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Character/Heydies.tscn" type="PackedScene" id=6]
+[ext_resource path="res://torchLight2D.tscn" type="PackedScene" id=7]
+[ext_resource path="res://particles/Fire.tscn" type="PackedScene" id=8]
+[ext_resource path="res://water.tscn" type="PackedScene" id=9]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+position = Vector2( -0.0374756, 0.637909 )
+
+[node name="Node2D" parent="." index="0" instance=ExtResource( 1 )]
+
+editor/display_folded = true
+
+[node name="Tank" parent="Node2D" index="13" instance=ExtResource( 2 )]
+
+position = Vector2( -2530.23, 1227.83 )
+scale = Vector2( 1.00081, 1.14768 )
+
+[node name="Tank" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 1652.47, 242.688 )
+scale = Vector2( 1.00081, 1.14768 )
+
+[node name="playerSpawnPoint" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 604.625, 486.96 )
+
+[node name="baguette" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( -1033.24, 432.485 )
+scale = Vector2( 0.53792, 0.516026 )
+
+[node name="radar" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( -423.936, 159.26 )
+scale = Vector2( 2.02534, 2.08054 )
+
+[node name="alien" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 1960.04, 169.362 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="6"]
+
+position = Vector2( -23.8328, -0.397217 )
+color = Color( 0.015721, 0.0040741, 0.347656, 1 )
+
+[node name="torches" type="Node" parent="." index="7"]
+
+editor/display_folded = true
+
+[node name="torch" parent="torches" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 455.718, 259.892 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch10" parent="torches" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 1224.33, 96.6476 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch11" parent="torches" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 1262.42, 502.039 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch12" parent="torches" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( -790, 190 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch13" parent="torches" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( -790, 380 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch14" parent="torches" index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 260, 410 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch15" parent="torches" index="6" instance=ExtResource( 7 )]
+
+position = Vector2( 460, 180 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch2" parent="torches" index="7" instance=ExtResource( 7 )]
+
+position = Vector2( 1161.9, 202.868 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch3" parent="torches" index="8" instance=ExtResource( 7 )]
+
+position = Vector2( 1162.17, 382.062 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch4" parent="torches" index="9" instance=ExtResource( 7 )]
+
+position = Vector2( 522.24, 498.854 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch5" parent="torches" index="10" instance=ExtResource( 7 )]
+
+position = Vector2( -1681.76, 151.809 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch6" parent="torches" index="11" instance=ExtResource( 7 )]
+
+position = Vector2( -1650, 445.03 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch7" parent="torches" index="12" instance=ExtResource( 7 )]
+
+position = Vector2( -1873.17, 343.217 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch8" parent="torches" index="13" instance=ExtResource( 7 )]
+
+position = Vector2( -1906.56, 92.3496 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torch9" parent="torches" index="14" instance=ExtResource( 7 )]
+
+position = Vector2( -1875.61, 251.178 )
+scale = Vector2( 0.608959, 0.897889 )
+
+[node name="torchRight" parent="torches" index="15" instance=ExtResource( 7 )]
+
+position = Vector2( -1756.26, 103.097 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight2" parent="torches" index="16" instance=ExtResource( 7 )]
+
+position = Vector2( -1724.33, 470.994 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight3" parent="torches" index="17" instance=ExtResource( 7 )]
+
+position = Vector2( -987.744, 151.233 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight4" parent="torches" index="18" instance=ExtResource( 7 )]
+
+position = Vector2( -60.3476, 189.611 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight5" parent="torches" index="19" instance=ExtResource( 7 )]
+
+position = Vector2( -63.6314, 383.33 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight6" parent="torches" index="20" instance=ExtResource( 7 )]
+
+position = Vector2( 349.016, 242.685 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight7" parent="torches" index="21" instance=ExtResource( 7 )]
+
+position = Vector2( 455.163, 406.549 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight8" parent="torches" index="22" instance=ExtResource( 7 )]
+
+position = Vector2( 707.458, 109.185 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight9" parent="torches" index="23" instance=ExtResource( 7 )]
+
+position = Vector2( 674.734, 477.083 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight10" parent="torches" index="24" instance=ExtResource( 7 )]
+
+position = Vector2( 2075.45, 174.764 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight11" parent="torches" index="25" instance=ExtResource( 7 )]
+
+position = Vector2( 2079.72, 263.621 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight12" parent="torches" index="26" instance=ExtResource( 7 )]
+
+position = Vector2( 2079.72, 340.673 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="torchRight13" parent="torches" index="27" instance=ExtResource( 7 )]
+
+position = Vector2( 1819.72, 477.082 )
+rotation = 3.14159
+scale = Vector2( 0.444862, -0.927972 )
+
+[node name="Fire" parent="." index="8" instance=ExtResource( 8 )]
+
+position = Vector2( 1530.04, 299.362 )
+
+[node name="Node2D2" parent="." index="9" instance=ExtResource( 9 )]
+
+position = Vector2( 806.25, 371.244 )
+
+

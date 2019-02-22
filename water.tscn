@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://water.shader" type="Shader" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://particles/water.gd" type="Script" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/blue_tint = Color( 1, 0.0784314, 0.576471, 1 )
+shader_param/sprite_scale = Vector2( 7.5, 5.5 )
+shader_param/scale_x = null
+_sections_unfolded = [ "shader_param" ]
+
+[node name="Node2D" type="Node2D"]
+
+position = Vector2( 682.248, 410.532 )
+scale = Vector2( 7.5, 5.5 )
+_sections_unfolded = [ "Material", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="water" type="Sprite" parent="." index="0"]
+
+material = SubResource( 1 )
+position = Vector2( -1.19252, 1.63126 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Material" ]
+
+

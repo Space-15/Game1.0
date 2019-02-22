@@ -1,0 +1,253 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Map/World1/WorldMaps/Outside.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/playerSpawnPoint.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Character/Heydies.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Items/tank.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/baguette.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/radar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Items/FluxCapacitor.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/LiquidHydrogenTank.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Items/RocketBooster.tscn" type="PackedScene" id=9]
+[ext_resource path="res://water.tscn" type="PackedScene" id=10]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 27.05, 32.2789 )
+
+[node name="playerSpawnPoint" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 271.83, 291.872 )
+
+[node name="1aliens" type="Node" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="alien" parent="1aliens" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 1221.49, 1064.57 )
+
+[node name="alien11" parent="1aliens" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 1680, 1050 )
+
+[node name="alien12" parent="1aliens" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 1430, 1280 )
+
+[node name="alien13" parent="1aliens" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 1990, 1210 )
+
+[node name="alien14" parent="1aliens" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 1410, 1110 )
+
+[node name="alien15" parent="1aliens" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 1180, 1230 )
+
+[node name="alien16" parent="1aliens" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 1310, 1360 )
+
+[node name="alien17" parent="1aliens" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 1510, 890 )
+
+[node name="alien18" parent="1aliens" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 1900, 980 )
+
+[node name="alien19" parent="1aliens" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 1700, 1210 )
+
+[node name="alien20" parent="1aliens" index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 1960, 1080 )
+
+[node name="alien21" parent="1aliens" index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 2190, 1200 )
+
+[node name="alien9" parent="1aliens" index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 2150, 1010 )
+
+[node name="alien10" parent="1aliens" index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 1770, 1370 )
+
+[node name="alien2" parent="1aliens" index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 115.643, 1808.82 )
+
+[node name="alien3" parent="1aliens" index="15" instance=ExtResource( 3 )]
+
+position = Vector2( 1504.49, -896.473 )
+
+[node name="alien4" parent="1aliens" index="16" instance=ExtResource( 3 )]
+
+position = Vector2( 2659.52, 1640.63 )
+
+[node name="alien5" parent="1aliens" index="17" instance=ExtResource( 3 )]
+
+position = Vector2( 5661.17, 1788.24 )
+
+[node name="alien6" parent="1aliens" index="18" instance=ExtResource( 3 )]
+
+position = Vector2( 3006.34, 3048.74 )
+
+[node name="alien7" parent="1aliens" index="19" instance=ExtResource( 3 )]
+
+position = Vector2( 3979.25, 287.498 )
+
+[node name="alien8" parent="1aliens" index="20" instance=ExtResource( 3 )]
+
+position = Vector2( 3080.34, -212.049 )
+
+[node name="tank6" parent="1aliens" index="21" instance=ExtResource( 4 )]
+
+position = Vector2( 5078.82, 2914.34 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="pickable" type="Node" parent="." index="3"]
+
+editor/display_folded = true
+
+[node name="baguette" type="Node" parent="pickable" index="0"]
+
+editor/display_folded = true
+
+[node name="key" parent="pickable/baguette" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 654.045, 510.421 )
+scale = Vector2( 0.529978, 0.575603 )
+
+[node name="key4" parent="pickable/baguette" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( -465.398, 1185.51 )
+scale = Vector2( 0.529978, 0.575603 )
+
+[node name="key2" parent="pickable/baguette" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 3532.35, 1664.09 )
+scale = Vector2( 0.529978, 0.575603 )
+
+[node name="key3" parent="pickable/baguette" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( -930.591, -501.723 )
+scale = Vector2( 0.924154, 0.575603 )
+
+[node name="oxygenTanks" type="Node" parent="pickable" index="1"]
+
+editor/display_folded = true
+
+[node name="tank" parent="pickable/oxygenTanks" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( -1166.22, 2089.96 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="tank2" parent="pickable/oxygenTanks" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 252.88, 407.807 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="tank3" parent="pickable/oxygenTanks" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 5175.84, -1047.72 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="tank4" parent="pickable/oxygenTanks" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 3043.8, 2421.36 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="tank5" parent="pickable/oxygenTanks" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 1216.34, 2612.36 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="tank7" parent="pickable/oxygenTanks" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( -1143.28, -1313.32 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="components" type="Node" parent="pickable" index="2"]
+
+editor/display_folded = true
+
+[node name="radar" parent="pickable/components" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( 657.875, 1958.2 )
+scale = Vector2( 2.97018, 3.10802 )
+
+[node name="flux" parent="pickable/components" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 4906.92, 2625.06 )
+scale = Vector2( 0.76808, 1.12533 )
+
+[node name="liquidTank" parent="pickable/components" index="2" instance=ExtResource( 8 )]
+
+position = Vector2( 4597.65, 539.455 )
+scale = Vector2( 1.29775, 2.11668 )
+
+[node name="RocketBooster" parent="pickable/components" index="3" instance=ExtResource( 9 )]
+
+position = Vector2( 6123.94, -350.011 )
+scale = Vector2( 1.18937, 1.92958 )
+
+[node name="water" parent="." index="4" instance=ExtResource( 10 )]
+
+position = Vector2( 382.938, 1129.2 )
+scale = Vector2( 3.85526, 2.44267 )
+
+[node name="water2" parent="." index="5" instance=ExtResource( 10 )]
+
+position = Vector2( 440.358, 479.7 )
+scale = Vector2( 2.59149, 1.71038 )
+
+[node name="water3" parent="." index="6" instance=ExtResource( 10 )]
+
+position = Vector2( 621.094, 2616.47 )
+scale = Vector2( 3.31387, 2.93784 )
+
+[node name="water4" parent="." index="7" instance=ExtResource( 10 )]
+
+position = Vector2( -625.724, 2638.68 )
+scale = Vector2( 3.31387, 2.5326 )
+
+[node name="water5" parent="." index="8" instance=ExtResource( 10 )]
+
+position = Vector2( 1627.16, 3161.59 )
+scale = Vector2( 5.73908, 2.98045 )
+
+[node name="water6" parent="." index="9" instance=ExtResource( 10 )]
+
+position = Vector2( 1631.26, 3481.47 )
+scale = Vector2( 5.73908, 2.98045 )
+
+[node name="water7" parent="." index="10" instance=ExtResource( 10 )]
+
+position = Vector2( 2228.56, 3167.21 )
+scale = Vector2( 6.27003, 2.83588 )
+
+[node name="water9" parent="." index="11" instance=ExtResource( 10 )]
+
+position = Vector2( 1889.72, 1875.36 )
+scale = Vector2( 3.52304, 3.16295 )
+
+[node name="water8" parent="." index="12" instance=ExtResource( 10 )]
+
+position = Vector2( 2233.69, 3479.95 )
+scale = Vector2( 6.36615, 2.9 )
+
+[node name="water10" parent="." index="13" instance=ExtResource( 10 )]
+
+position = Vector2( -614.817, 1061.64 )
+scale = Vector2( 6.36615, 2.9 )
+
+

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Character/Oxygen.gd" type="Script" id=1]
+
+[node name="Oxygen" type="Node"]
+
+script = ExtResource( 1 )
+max_oxygen = 100
+
+

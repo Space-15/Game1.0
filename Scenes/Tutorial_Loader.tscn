@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/TutorialLoader.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Character/attack2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameInterface/Interface.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/OxygenTimer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Invent.tscn" type="PackedScene" id=7]
+
+[node name="Tutorial" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="CanvasLayer" parent="." index="0" instance=ExtResource( 2 )]
+
+pause_mode = 2
+_sections_unfolded = [ "Pause" ]
+
+[node name="TutorialLoader" type="Node2D" parent="." index="1"]
+
+script = ExtResource( 3 )
+START_Tutorial = "res://Map/World1/WorldMaps/MainCave.tscn"
+
+[node name="player" parent="TutorialLoader" index="0" instance=ExtResource( 4 )]
+
+[node name="Interface" parent="TutorialLoader/player" index="7" instance=ExtResource( 5 )]
+
+margin_left = -211.0
+margin_top = -178.0
+margin_right = -211.0
+margin_bottom = -242.0
+
+[node name="OxygenTimer" parent="TutorialLoader" index="1" instance=ExtResource( 6 )]
+
+[node name="CanvasLayer2" parent="." index="2" instance=ExtResource( 7 )]
+
+[connection signal="health_changed" from="TutorialLoader/player/Health" to="TutorialLoader/player/Interface" method="_on_Health_health_changed"]
+
+[connection signal="oxygen_changed" from="TutorialLoader/player/Oxygen" to="TutorialLoader/player/Interface" method="_on_Oxygen_oxygen_changed"]
+
+[connection signal="timeout" from="TutorialLoader/OxygenTimer" to="TutorialLoader/player" method="_on_Timer_timeout"]
+
+
+[editable path="TutorialLoader/player"]
+[editable path="TutorialLoader/player/Interface"]

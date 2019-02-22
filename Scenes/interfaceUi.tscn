@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Player/Inventory.gd" type="Script" id=1]
+
+[sub_resource type="Theme" id=1]
+
+
+[node name="Panel" type="Panel"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 859.0
+margin_top = 291.0
+margin_right = 1019.0
+margin_bottom = 491.0
+rect_rotation = 0.03
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse", "Pause" ]
+
+[node name="GridContainer" type="GridContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 6.0
+margin_top = 7.0
+margin_right = 154.0
+margin_bottom = 193.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 1 )
+columns = 4
+script = ExtResource( 1 )
+_sections_unfolded = [ "Mouse", "Pause", "Rect" ]
+
+

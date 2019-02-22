@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Purple Planet Music - Cinematic - Battle Plan.wav-c361c38d7cbd6f9d514280a4b3b3ffa4.sample"
+
+[deps]
+
+source_file="res://Purple Planet Music - Cinematic - Battle Plan.wav"
+dest_files=[ "res://.import/Purple Planet Music - Cinematic - Battle Plan.wav-c361c38d7cbd6f9d514280a4b3b3ffa4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
