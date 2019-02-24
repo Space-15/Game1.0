@@ -117,6 +117,7 @@ func _gui_input(event):
 				clickedSlot = slot
 				
 				if clickedSlot.item != null:
+					removeItem()
 					if clickedSlot.item.name == "Baguette":				
 						clickedSlot.useItem()
 						Global.Player.heal_lp(20)
@@ -124,6 +125,7 @@ func _gui_input(event):
 					elif clickedSlot.item.name == 	"OxygenTank":
 						clickedSlot.useItem()
 						Global.Player.gain_o2(20)
+						
 					   	
 func save():
 	pass
