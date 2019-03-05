@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="Shader" id=1]
+
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform float direction;
+uniform float velocity = 1.0;
+uniform float intensity;
+
+float snow(vec2 uv, float scale, float time)
+{
+    float w = smoothstep(1.0,0.0,-uv.y*(scale/10.0));
+    if(w<0.1){return 0.0;}
+    uv+=time/scale;
+    uv.y-=time*velocity/scale; //VELOCITY
+    uv.x+=sin(uv.y+time*0.5)/scale;
+    uv*=scale;
+    vec2 s=floor(uv);
+    vec2 f=fract(uv);
+    vec2 p;
+    float k=3.0;
+    float d;
+    vec2 t = (s*p*vec2(scale))*mat2(vec2(7.0, 3.0), vec2(6.0,5.0));
+    p.y=-(0.5+0.35*sin(11.0*fract(sin((s.y+p.y+scale)*t.y)*5.0))-f.y);
+    p.x = f.x;
+
+    d=length(p);
+    k=min(d,k);
+    k=smoothstep(0.0,k,sin(f.x+f.y)*0.01);
+    return k*w;
+}
+
+void fragment(){
+    //vec2 uv=(COLOR.xy*2.0-SCREEN_UV.xy)/min(SCREEN_UV.x,SCREEN_UV.y); 
+	vec2 uv= UV;
+    float c=smoothstep(1.0,0.3,clamp(uv.y*0.3+0.8,0.0,0.75));
+    c+=snow(uv, 30.0, TIME)*0.3;
+    c+=snow(uv, 20.0, TIME)*0.5;
+    c+=snow(uv, 15.0, TIME)*0.8;
+    c+=snow(uv, 10.0, TIME);
+    c+=snow(uv, 8.0, TIME);
+    c+=snow(uv, 6.0, TIME);
+    c+=snow(uv, 5.0, TIME);
+    c+=snow(uv, 2.0, TIME);
+    COLOR = vec4(vec3(c),0.5);
+
+}"
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="ShaderMaterial" id=2]
+
+resource_local_to_scene = true
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/direction = null
+shader_param/velocity = null
+shader_param/intensity = null
+_sections_unfolded = [ "Resource", "shader_param" ]
+
+[sub_resource type="ImageTexture" id=3]
+
+flags = 7
+storage = 0
+lossy_quality = 0.7
+flags = 7
+size = Vector2( 256, 256 )
+
+[node name="TextureRect" type="TextureRect" index="0"]
+
+material = SubResource( 2 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 175.0
+margin_top = -904.0
+margin_right = 36222.0
+margin_bottom = 21420.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = SubResource( 3 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Material" ]
+
+
